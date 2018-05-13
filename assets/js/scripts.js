@@ -22,14 +22,26 @@ jQuery(document).ready(function() {
 
     var typewriter = new Typewriter(typeElement, {
         loop: true,
-        typingSpeed: 55,
+        typingSpeed: 85,
         deleteSpeed: 10
     });
 
     typewriter.typeString("We're working on getting the new site up and running.")
         .pauseFor(2000)
         .deleteAll()
-        .typeString('Stay tuned!')
+        .typeString("It may seems roo long")
+        .pauseFor(800)
+        .deleteChars(8)
+        .typeString("too long time.")
         .pauseFor(2000)
+        .deleteAll()
+        .typeString("Good things do take dime.")
+        .pauseFor(500)
+        .deleteChars(5)
+        .typeString("time.")
+        .pauseFor(2000)
+        .deleteAll()
+        .typeString('Stay tuned!')
+        .pauseFor(3000)
         .start();
 });

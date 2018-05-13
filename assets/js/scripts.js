@@ -17,4 +17,19 @@ jQuery(document).ready(function() {
 		$(this).find('.seconds').text(event.offset.seconds);
 	});
 
+
+   var typeElement = document.getElementById('typedText');
+
+    var typewriter = new Typewriter(typeElement, {
+        loop: true,
+        typingSpeed: 55,
+        deleteSpeed: 10
+    });
+
+    typewriter.typeString("We're working on getting the new site up and running.")
+        .pauseFor(2000)
+        .deleteAll()
+        .typeString('Stay tuned!')
+        .pauseFor(2000)
+        .start();
 });
